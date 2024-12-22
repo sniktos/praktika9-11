@@ -1,11 +1,15 @@
-def input_text_manually():
+def display_results(word_analysis, total_vowels):
     """
-    Запрашивает текст у пользователя.
+    Форматирует и выводит результаты анализа текста.
     """
-    text = input("Введите текст: ")
-    return text
+    print("\nРезультаты анализа текста:")
+    print(f"{'Слово':<15}{'Гласные':<10}{'Согласные':<10}")
+    print("-" * 35)
+    for word, vowels, consonants in word_analysis:
+        print(f"{word:<15}{vowels:<10}{consonants:<10}")
+    print(f"\nОбщее количество гласных в тексте: {total_vowels}")
 
 # Тестирование
 if __name__ == "__main__":
-    manual_text = input_text_manually()
-    print("Введенный текст:", manual_text)
+    sample_analysis = [('hello', 2, 3), ('world', 1, 4), ('python', 1, 5)]
+    display_results(sample_analysis, 4)
