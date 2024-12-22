@@ -5,8 +5,8 @@ def generate_random_text(word_count):
     """
     Генерирует случайный текст из заданного количества слов.
     """
-    vowels = "aeiou"
-    consonants = "bcdfghjklmnpqrstvwxyz"
+    vowels = "aeiouy"
+    consonants = "bcdfghjklmnpqrstvwxz"
     words = []
 
     for _ in range(word_count):
